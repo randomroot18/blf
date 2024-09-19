@@ -48,6 +48,10 @@ header li {
     padding: 0 20px 0 20px;
 }
 
+header nav {
+    text-align: right;
+}
+
 /* Hero Section */
 .hero {
     background: url('hero.jpg') no-repeat center center/cover;
@@ -96,6 +100,7 @@ section {
 .program-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .program-item {
@@ -105,6 +110,15 @@ section {
     width: 30%;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.program-item:nth-child(3n + 1) {
+    margin-left: 0;
+}
+
+.program-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 /* About Page Styling */
@@ -137,5 +151,84 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
+}
 
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust container width */
+    .container {
+        width: 90%;
+    }
+
+    /* Adjust header nav for mobile */
+    header nav {
+        text-align: center;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header li {
+        padding: 10px 0;
+    }
+
+    /* Hero Section Adjustments */
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Program List Adjustments */
+    .program-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-item {
+        width: 80%;
+    }
+
+    /* About Page Adjustments */
+    .about-page h2 {
+        font-size: 28px;
+    }
+
+    .about-page p {
+        font-size: 16px;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small devices */
+    header h1 {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .program-item {
+        width: 90%;
+    }
 }
