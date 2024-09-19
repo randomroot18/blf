@@ -49,7 +49,42 @@ header li {
 }
 
 header nav {
-    text-align: right;
+    position: relative;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Mobile Menu */
+#nav-list {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-list.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #35424a;
+    width: 100%;
+    text-align: center;
+}
+
+#nav-list li {
+    display: inline-block;
+    width: 100%;
 }
 
 /* Hero Section */
@@ -160,18 +195,22 @@ footer {
         width: 90%;
     }
 
-    /* Adjust header nav for mobile */
-    header nav {
-        text-align: center;
+    /* Hamburger Menu Icon */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
-    header ul {
-        display: flex;
+    /* Hide nav list by default */
+    #nav-list {
+        display: none;
         flex-direction: column;
-        align-items: center;
     }
 
-    header li {
+    #nav-list li {
+        display: block;
         padding: 10px 0;
     }
 
